@@ -7,22 +7,5 @@ if (button) {
     const newElement = document
       .createElement("div")
       .appendChild(document.createTextNode("Hello, world!"));
-
-    const container = document.getElementById("container");
-    container.appendChild(newElement);
-    fetch("https://goweather.herokuapp.com/weather/Atlanta").then(
-      async (response) => {
-        const data = await response.json();
-        console.log(data);
-      }
-    );
   });
 }
-
-// Get weather and log to console
-// fetch("https://goweather.herokuapp.com/weather/Atlanta").then(
-//   async (response) => {
-//     const data = await response.json();
-//     console.log(data);
-//   }
-// );
