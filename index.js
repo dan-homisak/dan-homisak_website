@@ -4,8 +4,12 @@ if (button) {
   button.addEventListener("click", () => {
     console.log("Button clicked!");
 
-    const newElement = document
-      .createElement("div")
-      .appendChild(document.createTextNode("Hello, world!"));
+    // Create a new div element and append it to the container
+    const container = document.getElementById("container");
+    if (container) {
+      const newElement = document.createElement("div");
+      newElement.textContent = "Hello, world!";
+      container.appendChild(newElement);
+    }
   });
 }
